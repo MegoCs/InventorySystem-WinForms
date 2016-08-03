@@ -16,7 +16,15 @@ namespace B_PaymentManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            LoginForm fLogin = new LoginForm();
+            if (fLogin.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new MainForm());
+            }
+            else
+            {
+                Application.Exit();
+            }
         }
     }
 }
