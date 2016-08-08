@@ -21,25 +21,10 @@ namespace B_PaymentManager
             con.startConnection();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            i++;
-            if (i <= 100)
-                progressBar1.Value = i;
-
-            if (i == 140)
-            {
-                timer1.Stop();
-                this.Hide();
-            }
-
-        }
-
         private void loginBtn_Click(object sender, EventArgs e)
         {
             if (userNameTxt.Text != "" && userPassTxt.Text != "")
             {
-                timer1.Start();
                 //check if password is true
                 con.SQLCODE("select * from SystemUsers where userPass='"+userPassTxt.Text+"' and userName='"+userNameTxt.Text+"'", false);
                 if (con.myReader.Read())
@@ -50,7 +35,6 @@ namespace B_PaymentManager
                 else {
                     MessageBox.Show("خطأ ف البيانات");
                 }
-                progressBar1.Value = 0;
             }
         }
     }

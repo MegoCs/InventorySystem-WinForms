@@ -12,10 +12,18 @@ namespace B_PaymentManager
 {
     public partial class MainForm : Form
     {
+        ConnectionClass dbObject;
+        AddProduct addPro;
+        SellingOperation sellOp;
+        AddClient addClient;
+        ClientPaymentManger clientPaymentManger;
+
+
         public MainForm()
         {
             InitializeComponent();
             tabControl1.DrawItem += new DrawItemEventHandler(tabControl1_DrawItem);
+            dbObject = new ConnectionClass();
         }
 
         private void tabControl1_DrawItem(Object sender, System.Windows.Forms.DrawItemEventArgs e)
@@ -52,9 +60,38 @@ namespace B_PaymentManager
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
 
-        private void addNewClientBtn_Click(object sender, EventArgs e)
+        private void addNewClientBtn_SalesTab_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = this.tabControl1.TabPages["AddClientTab"];
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                sellOp = new SellingOperation();
+                sellOp.ShowDialog();
+            }
+            if (tabControl1.SelectedIndex==2)
+            {
+                addPro = new AddProduct();
+                addPro.ShowDialog();
+            }
+            if (tabControl1.SelectedIndex == 3)
+            {
+                clientPaymentManger = new ClientPaymentManger();
+                clientPaymentManger.ShowDialog();
+            }
+            if (tabControl1.SelectedIndex == 4)
+            {
+                addClient = new AddClient();
+                addClient.ShowDialog();
+            }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            FunctionsClass func = new FunctionsClass();
         }
     }
 }

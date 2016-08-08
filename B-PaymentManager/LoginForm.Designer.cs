@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.loginBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,25 +35,12 @@
             this.userPassTxt = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 115);
-            this.progressBar1.MarqueeAnimationSpeed = 0;
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(278, 23);
-            this.progressBar1.TabIndex = 3;
-            // 
             // loginBtn
             // 
             this.loginBtn.Location = new System.Drawing.Point(78, 86);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(135, 23);
-            this.loginBtn.TabIndex = 4;
+            this.loginBtn.TabIndex = 2;
             this.loginBtn.Text = "تسجيل الدخول";
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
@@ -84,7 +68,7 @@
             this.userNameTxt.Location = new System.Drawing.Point(78, 20);
             this.userNameTxt.Name = "userNameTxt";
             this.userNameTxt.Size = new System.Drawing.Size(135, 20);
-            this.userNameTxt.TabIndex = 9;
+            this.userNameTxt.TabIndex = 0;
             this.userNameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // userPassTxt
@@ -93,20 +77,19 @@
             this.userPassTxt.Name = "userPassTxt";
             this.userPassTxt.PasswordChar = '*';
             this.userPassTxt.Size = new System.Drawing.Size(135, 20);
-            this.userPassTxt.TabIndex = 10;
+            this.userPassTxt.TabIndex = 1;
             this.userPassTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 150);
+            this.ClientSize = new System.Drawing.Size(302, 126);
             this.Controls.Add(this.userPassTxt);
             this.Controls.Add(this.userNameTxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginBtn);
-            this.Controls.Add(this.progressBar1);
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تسجيل الدخول";
@@ -116,9 +99,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
