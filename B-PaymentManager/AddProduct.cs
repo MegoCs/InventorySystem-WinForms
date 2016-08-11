@@ -23,15 +23,29 @@ namespace B_PaymentManager
         {
             dbConObj.startConnection();
             //do some insert stuff
-            if (checkBox1.Checked)
+            if (productNameTxt_AddProductTab.Text != "" && productQuantatyTxt_AddProductTab.Text != "" && productMinQuantatyTxt_AddProductTab.Text != "" && productSellingPriceTxt_AddProductTab.Text != "")
             {
-                dbConObj.SQLUPDATE("insert into Groups (group_name) values('"+newGroupsNameTxt_AddProductTab.Text+"')", false);
-                FunctionsClass fun = new FunctionsClass();
-                groupsNameComb_AddProductTab.Items.Clear();
-                groupsNameComb_AddProductTab.Items.AddRange(FunctionsClass.groupsList.ToArray());
-                groupsNameComb_AddProductTab.SelectedIndex = groupsNameComb_AddProductTab.Items.Count - 1;
+                if (checkBox1.Checked)
+                {
+                    dbConObj.SQLUPDATE("insert into Groups (group_name) values('" + newGroupsNameTxt_AddProductTab.Text + "')", false);
+                    FunctionsClass fun = new FunctionsClass();
+                    int groupId = -1;
+                    dbConObj.SQLCODE("select id from Groups where group_name='" + newGroupsNameTxt_AddProductTab.Text + "'", false);
+                    while (dbConObj.myReader.Read())
+                    {
+                        groupId = int.Parse(dbConObj.myReader[0].ToString());   
+                    }
+                    dbConObj.SQLUPDATE("insert into Products (product_name,product_group_id,product_avail_quant,product_risk_quant,product_price) values ('" + productNameTxt_AddProductTab.Text + "'," + groupId + "," + productQuantatyTxt_AddProductTab.Text + "," + productMinQuantatyTxt_AddProductTab.Text + "," + productSellingPriceTxt_AddProductTab.Text + ")", true);
+                }
+                else
+                {
+
+                    dbConObj.SQLUPDATE("insert into Products (product_name,product_group_id,product_avail_quant,product_risk_quant,product_price) values ('" + productNameTxt_AddProductTab.Text + "'," + (groupsNameComb_AddProductTab.SelectedItem as ComboBoxItem).value + "," + productQuantatyTxt_AddProductTab.Text + "," + productMinQuantatyTxt_AddProductTab.Text + "," + productSellingPriceTxt_AddProductTab.Text + ")", true);
+                }
             }
-                dbConObj.SQLUPDATE("insert into Products (product_name,product_group_id,product_avail_quant,product_risk_quant,product_price) values ('" + productNameTxt_AddProductTab.Text + "'," + (groupsNameComb_AddProductTab.SelectedItem as ComboBoxItem).value+"," + productQuantatyTxt_AddProductTab.Text + ","+productMinQuantatyTxt_AddProductTab.Text+","+productSellingPriceTxt_AddProductTab.Text+")", true);
+            else {
+                MessageBox.Show("برجاء اتمام البيانات");
+            }
         }
 
         private void AddProduct_Load(object sender, EventArgs e)
@@ -47,6 +61,12 @@ namespace B_PaymentManager
                 groupsNameComb_AddProductTab.Visible = !checkBox1.Checked;
 
             }
+        }
+
+        private void changeProductQuant_Click(object sender, EventArgs e)
+        {
+            ProductQuantaty proQ = new ProductQuantaty();
+            proQ.ShowDialog();
         }
     }
 }

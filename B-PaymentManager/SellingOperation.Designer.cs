@@ -162,9 +162,11 @@
             this.addNewClientBtn_SalesTab.TabIndex = 93;
             this.addNewClientBtn_SalesTab.Text = "اضافة عميل جديد";
             this.addNewClientBtn_SalesTab.UseVisualStyleBackColor = true;
+            this.addNewClientBtn_SalesTab.Click += new System.EventHandler(this.addNewClientBtn_SalesTab_Click);
             // 
             // clientNameCom_SalesTab
             // 
+            this.clientNameCom_SalesTab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.clientNameCom_SalesTab.FormattingEnabled = true;
             this.clientNameCom_SalesTab.Location = new System.Drawing.Point(408, 538);
             this.clientNameCom_SalesTab.MaxDropDownItems = 20;
@@ -194,6 +196,7 @@
             this.saveBtn_SalesTab.TabIndex = 90;
             this.saveBtn_SalesTab.Text = "حفظ البيانات";
             this.saveBtn_SalesTab.UseVisualStyleBackColor = true;
+            this.saveBtn_SalesTab.Click += new System.EventHandler(this.saveBtn_SalesTab_Click);
             // 
             // label13
             // 
@@ -214,8 +217,9 @@
             this.productPaidValueTxt_SalesTab.Name = "productPaidValueTxt_SalesTab";
             this.productPaidValueTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productPaidValueTxt_SalesTab.Size = new System.Drawing.Size(130, 26);
-            this.productPaidValueTxt_SalesTab.TabIndex = 87;
+            this.productPaidValueTxt_SalesTab.TabIndex = 3;
             this.productPaidValueTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.productPaidValueTxt_SalesTab.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productPaidValueTxt_SalesTab_KeyDown);
             // 
             // label11
             // 
@@ -232,13 +236,16 @@
             // 
             // productGroupCom_SalesTab
             // 
+            this.productGroupCom_SalesTab.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.productGroupCom_SalesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productGroupCom_SalesTab.FormattingEnabled = true;
             this.productGroupCom_SalesTab.Location = new System.Drawing.Point(568, 49);
             this.productGroupCom_SalesTab.MaxDropDownItems = 20;
             this.productGroupCom_SalesTab.Name = "productGroupCom_SalesTab";
             this.productGroupCom_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.productGroupCom_SalesTab.Size = new System.Drawing.Size(332, 21);
+            this.productGroupCom_SalesTab.Size = new System.Drawing.Size(332, 26);
             this.productGroupCom_SalesTab.TabIndex = 85;
+            this.productGroupCom_SalesTab.SelectedIndexChanged += new System.EventHandler(this.productGroupCom_SalesTab_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -275,8 +282,9 @@
             this.productNameTxt_SalesTab.Name = "productNameTxt_SalesTab";
             this.productNameTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productNameTxt_SalesTab.Size = new System.Drawing.Size(372, 26);
-            this.productNameTxt_SalesTab.TabIndex = 82;
+            this.productNameTxt_SalesTab.TabIndex = 0;
             this.productNameTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.productNameTxt_SalesTab.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productNameTxt_SalesTab_KeyDown);
             // 
             // productOldPriceLab_SalesTab
             // 
@@ -308,10 +316,10 @@
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(66, 97);
+            this.label9.Location = new System.Drawing.Point(25, 97);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(112, 30);
+            this.label9.Size = new System.Drawing.Size(153, 30);
             this.label9.TabIndex = 79;
             this.label9.Text = "تاربخ اليوم";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -395,9 +403,10 @@
             this.productQuantatyTxt_SalesTab.Name = "productQuantatyTxt_SalesTab";
             this.productQuantatyTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productQuantatyTxt_SalesTab.Size = new System.Drawing.Size(58, 26);
-            this.productQuantatyTxt_SalesTab.TabIndex = 70;
+            this.productQuantatyTxt_SalesTab.TabIndex = 2;
             this.productQuantatyTxt_SalesTab.Text = "0";
             this.productQuantatyTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.productQuantatyTxt_SalesTab.TextChanged += new System.EventHandler(this.productQuantatyTxt_SalesTab_TextChanged);
             // 
             // productPriceTxt_SalesTab
             // 
@@ -406,7 +415,7 @@
             this.productPriceTxt_SalesTab.Name = "productPriceTxt_SalesTab";
             this.productPriceTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productPriceTxt_SalesTab.Size = new System.Drawing.Size(113, 26);
-            this.productPriceTxt_SalesTab.TabIndex = 69;
+            this.productPriceTxt_SalesTab.TabIndex = 1;
             this.productPriceTxt_SalesTab.Text = "0.0";
             this.productPriceTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -461,6 +470,7 @@
             this.sellingDataGrid_SalesTab.Size = new System.Drawing.Size(879, 288);
             this.sellingDataGrid_SalesTab.StandardTab = true;
             this.sellingDataGrid_SalesTab.TabIndex = 67;
+            this.sellingDataGrid_SalesTab.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.sellingDataGrid_SalesTab_UserDeletingRow);
             // 
             // Column1
             // 
@@ -576,6 +586,7 @@
             this.Name = "SellingOperation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "عملية بيع جديدة";
+            this.Load += new System.EventHandler(this.SellingOperation_Load);
             this.panel1_Sales.ResumeLayout(false);
             this.panel1_Sales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sellingDataGrid_SalesTab)).EndInit();

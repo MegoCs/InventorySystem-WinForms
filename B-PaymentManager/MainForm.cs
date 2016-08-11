@@ -17,7 +17,7 @@ namespace B_PaymentManager
         SellingOperation sellOp;
         AddClient addClient;
         ClientPaymentManger clientPaymentManger;
-
+        ProductsShortageReport shortageForm;
 
         public MainForm()
         {
@@ -86,6 +86,11 @@ namespace B_PaymentManager
             {
                 addClient = new AddClient();
                 addClient.ShowDialog();
+            }
+            if (tabControl1.SelectedIndex == 5)
+            {
+                shortageForm = new ProductsShortageReport();
+                shortageForm.ShowDialog();
             }
         }
 

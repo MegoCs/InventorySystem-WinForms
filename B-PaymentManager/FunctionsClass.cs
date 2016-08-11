@@ -18,7 +18,6 @@ namespace B_PaymentManager
             ClientsData();
             GroupsData();
         }
-
         private void ClientsData()
         {
             clientsList.Clear();

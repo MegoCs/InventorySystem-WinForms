@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.changeProductQuant = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupsNameComb_AddProductTab = new System.Windows.Forms.ComboBox();
             this.newGroupsNameTxt_AddProductTab = new System.Windows.Forms.TextBox();
@@ -52,6 +53,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.changeProductQuant);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.saveBtn);
@@ -62,6 +64,16 @@
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel1.Size = new System.Drawing.Size(720, 253);
             this.panel1.TabIndex = 1;
+            // 
+            // changeProductQuant
+            // 
+            this.changeProductQuant.Location = new System.Drawing.Point(131, 207);
+            this.changeProductQuant.Name = "changeProductQuant";
+            this.changeProductQuant.Size = new System.Drawing.Size(194, 33);
+            this.changeProductQuant.TabIndex = 34;
+            this.changeProductQuant.Text = "اضافة كمية لصنف حالى";
+            this.changeProductQuant.UseVisualStyleBackColor = true;
+            this.changeProductQuant.Click += new System.EventHandler(this.changeProductQuant_Click);
             // 
             // groupBox3
             // 
@@ -265,5 +277,6 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox productSellingPriceTxt_AddProductTab;
         private System.Windows.Forms.Button saveBtn;
+        private System.Windows.Forms.Button changeProductQuant;
     }
 }
