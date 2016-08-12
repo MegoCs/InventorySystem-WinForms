@@ -92,6 +92,10 @@ namespace B_PaymentManager
                 shortageForm = new ProductsShortageReport();
                 shortageForm.ShowDialog();
             }
+            if (tabControl1.SelectedIndex == 5)
+            {
+
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)

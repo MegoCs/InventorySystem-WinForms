@@ -85,6 +85,17 @@
     <Compile Include="ComboBoxItem.cs" />
     <Compile Include="ConnectionClass.cs" />
     <Compile Include="FunctionsClass.cs" />
+    <Compile Include="GardReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GardReport.Designer.cs">
+      <DependentUpon>GardReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GardReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GardReportDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +152,10 @@
     <EmbeddedResource Include="ClientReport.resx">
       <DependentUpon>ClientReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Gard.rdlc" />
+    <EmbeddedResource Include="GardReport.resx">
+      <DependentUpon>GardReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +194,17 @@
     </None>
     <None Include="ClientReportDataSet1.xss">
       <DependentUpon>ClientReportDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GardReportDataSet.xsc">
+      <DependentUpon>GardReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GardReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GardReportDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GardReportDataSet.xss">
+      <DependentUpon>GardReportDataSet.xsd</DependentUpon>
     </None>
     <None Include="ProductsShortage.xsc">
       <DependentUpon>ProductsShortage.xsd</DependentUpon>
