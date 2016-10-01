@@ -12,7 +12,6 @@ namespace B_PaymentManager
 {
     public partial class LoginForm : Form
     {
-        int i = 0;
         ConnectionClass con;
         public LoginForm()
         {
@@ -23,18 +22,26 @@ namespace B_PaymentManager
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            if (userNameTxt.Text != "" && userPassTxt.Text != "")
+            try
             {
-                //check if password is true
-                con.SQLCODE("select * from SystemUsers where userPass='"+userPassTxt.Text+"' and userName='"+userNameTxt.Text+"'", false);
-                if (con.myReader.Read())
+                if (userNameTxt.Text != "" && userPassTxt.Text != "")
                 {
-                    this.DialogResult = DialogResult.OK;
-                    this.Close();
+                    con.SQLCODE("select * from SystemUsers where (userPass='" + userPassTxt.Text + "') and (userName='" + userNameTxt.Text + "')", false);
+                    if (con.myReader.Read())
+                    {
+                        this.DialogResult = DialogResult.OK;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("خطأ ف البيانات");
+                    }
                 }
-                else {
-                    MessageBox.Show("خطأ ف البيانات");
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("خطأ ف استرجاع البيانات");
+                Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
             }
         }
     }

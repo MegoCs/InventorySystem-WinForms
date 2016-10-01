@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.searchBtn = new System.Windows.Forms.Button();
             this.clientNameComb = new System.Windows.Forms.ComboBox();
             this.clientNationalTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.printedReportBtn = new System.Windows.Forms.Button();
             this.newPayment = new System.Windows.Forms.Button();
             this.detailsGrid = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.printedReportBtn = new System.Windows.Forms.Button();
+            this.deleteItemsBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detailsGrid)).BeginInit();
             this.SuspendLayout();
@@ -100,6 +101,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.deleteItemsBtn);
             this.panel1.Controls.Add(this.printedReportBtn);
             this.panel1.Controls.Add(this.newPayment);
             this.panel1.Controls.Add(this.detailsGrid);
@@ -115,9 +117,19 @@
             this.panel1.Size = new System.Drawing.Size(1095, 444);
             this.panel1.TabIndex = 5;
             // 
+            // printedReportBtn
+            // 
+            this.printedReportBtn.Location = new System.Drawing.Point(742, 401);
+            this.printedReportBtn.Name = "printedReportBtn";
+            this.printedReportBtn.Size = new System.Drawing.Size(341, 31);
+            this.printedReportBtn.TabIndex = 17;
+            this.printedReportBtn.Text = "طباعة هذا التقرير";
+            this.printedReportBtn.UseVisualStyleBackColor = true;
+            this.printedReportBtn.Click += new System.EventHandler(this.printedReportBtn_Click);
+            // 
             // newPayment
             // 
-            this.newPayment.Location = new System.Drawing.Point(13, 401);
+            this.newPayment.Location = new System.Drawing.Point(220, 401);
             this.newPayment.Name = "newPayment";
             this.newPayment.Size = new System.Drawing.Size(127, 31);
             this.newPayment.TabIndex = 16;
@@ -135,23 +147,23 @@
             this.detailsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.detailsGrid.BackgroundColor = System.Drawing.Color.LightGray;
             this.detailsGrid.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.detailsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.detailsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.detailsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.detailsGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.detailsGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.detailsGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.detailsGrid.GridColor = System.Drawing.SystemColors.Control;
             this.detailsGrid.Location = new System.Drawing.Point(13, 139);
@@ -161,8 +173,8 @@
             this.detailsGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.detailsGrid.RowHeadersVisible = false;
             this.detailsGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.detailsGrid.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailsGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.detailsGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailsGrid.RowTemplate.DefaultCellStyle.NullValue = null;
             this.detailsGrid.RowTemplate.ErrorText = "No data here";
@@ -184,15 +196,15 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "الاصناف المدونة على الفاتورة";
             // 
-            // printedReportBtn
+            // deleteItemsBtn
             // 
-            this.printedReportBtn.Location = new System.Drawing.Point(742, 401);
-            this.printedReportBtn.Name = "printedReportBtn";
-            this.printedReportBtn.Size = new System.Drawing.Size(341, 31);
-            this.printedReportBtn.TabIndex = 17;
-            this.printedReportBtn.Text = "طباعة هذا التقرير";
-            this.printedReportBtn.UseVisualStyleBackColor = true;
-            this.printedReportBtn.Click += new System.EventHandler(this.printedReportBtn_Click);
+            this.deleteItemsBtn.Location = new System.Drawing.Point(85, 401);
+            this.deleteItemsBtn.Name = "deleteItemsBtn";
+            this.deleteItemsBtn.Size = new System.Drawing.Size(129, 31);
+            this.deleteItemsBtn.TabIndex = 18;
+            this.deleteItemsBtn.Text = "مرتجع";
+            this.deleteItemsBtn.UseVisualStyleBackColor = true;
+            this.deleteItemsBtn.Click += new System.EventHandler(this.deleteItemsBtn_Click);
             // 
             // ClientPaymentManger
             // 
@@ -226,5 +238,6 @@
         public System.Windows.Forms.DataGridView detailsGrid;
         private System.Windows.Forms.Button newPayment;
         private System.Windows.Forms.Button printedReportBtn;
+        private System.Windows.Forms.Button deleteItemsBtn;
     }
 }

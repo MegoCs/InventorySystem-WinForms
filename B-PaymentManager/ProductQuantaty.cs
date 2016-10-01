@@ -22,15 +22,16 @@ namespace B_PaymentManager
             init();
         }
         private void init() {
-            dbConObj.startConnection();
+            try
+            {
+                dbConObj.startConnection();
             productGroupCom.Items.Add("كل الاصناف");
             productGroupCom.SelectedIndex = 0;
             productGroupCom.Items.AddRange(FunctionsClass.groupsList.ToArray());
 
             productsListAuto = new AutoCompleteStringCollection();
             dbConObj.SQLCODE("SELECT product_name from Products ", false);
-            try
-            {
+            
                 while (dbConObj.myReader.Read())
                 {
                     productsListAuto.Add(dbConObj.myReader["product_name"].ToString());
@@ -39,32 +40,36 @@ namespace B_PaymentManager
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("خطأ فى البيانات");
+                Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
             }
         }
         private void productGroupCom_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (productGroupCom.SelectedIndex != 0)
+            try
             {
-                productsListAuto = new AutoCompleteStringCollection();
-                dbConObj.SQLCODE("SELECT product_name from Products where product_group_id=" + (productGroupCom.SelectedItem as ComboBoxItem).value + "", false);
-                try
+                if (productGroupCom.SelectedIndex != 0)
                 {
+                    productsListAuto = new AutoCompleteStringCollection();
+                    dbConObj.SQLCODE("SELECT product_name from Products where product_group_id=" + (productGroupCom.SelectedItem as ComboBoxItem).value + "", false);
+
                     while (dbConObj.myReader.Read())
                     {
                         productsListAuto.Add(dbConObj.myReader["product_name"].ToString());
                     }
                     productNameTxt.AutoCompleteCustomSource = productsListAuto;
                 }
-                catch (Exception ex)
-                {
-
-                }
             }
-        }
+            catch (Exception ex)
+            {
+                MessageBox.Show("خطأ فى البيانات");
+                Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
+            }
+         }
         private void productNameTxt_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            try{
+                if (e.KeyCode == Keys.Enter)
             {
                 if (productNameTxt.Text != "")
                 {
@@ -79,12 +84,25 @@ namespace B_PaymentManager
                 }
             }
         }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("خطأ فى البيانات");
+                    Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
+                }
+}
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            try{ 
             dbConObj.SQLUPDATE("update Products set product_avail_quant=product_avail_quant+"+int.Parse(addAvailTxt.Text)+ ",product_risk_quant="+critcalTxt.Text+ ",product_price="+priceTxt.Text+"", true);
             clearFields();
         }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("خطأ فى البيانات");
+                    Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
+                }
+}
 
         private void clearFields()
         {

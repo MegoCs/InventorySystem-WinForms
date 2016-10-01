@@ -22,8 +22,10 @@ namespace B_PaymentManager
         private void saveBtn_Click(object sender, EventArgs e)
         {
             dbConObj.startConnection();
-            //do some insert stuff
-            if (productNameTxt_AddProductTab.Text != "" && productQuantatyTxt_AddProductTab.Text != "" && productMinQuantatyTxt_AddProductTab.Text != "" && productSellingPriceTxt_AddProductTab.Text != "")
+            try
+            {
+                //do some insert stuff
+                if (productNameTxt_AddProductTab.Text != "" && productQuantatyTxt_AddProductTab.Text != "" && productMinQuantatyTxt_AddProductTab.Text != "" && productSellingPriceTxt_AddProductTab.Text != "")
             {
                 if (checkBox1.Checked)
                 {
@@ -42,9 +44,19 @@ namespace B_PaymentManager
 
                     dbConObj.SQLUPDATE("insert into Products (product_name,product_group_id,product_avail_quant,product_risk_quant,product_price) values ('" + productNameTxt_AddProductTab.Text + "'," + (groupsNameComb_AddProductTab.SelectedItem as ComboBoxItem).value + "," + productQuantatyTxt_AddProductTab.Text + "," + productMinQuantatyTxt_AddProductTab.Text + "," + productSellingPriceTxt_AddProductTab.Text + ")", true);
                 }
+                    productNameTxt_AddProductTab.Text = "";
+                    productQuantatyTxt_AddProductTab.Text = "";
+                    productMinQuantatyTxt_AddProductTab.Text = "";
+                    productSellingPriceTxt_AddProductTab.Text = "";
             }
             else {
                 MessageBox.Show("برجاء اتمام البيانات");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("خطأ اثناء اضافه البيانات");
+                Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
             }
         }
 
@@ -59,7 +71,6 @@ namespace B_PaymentManager
             {
                 newGroupsNameTxt_AddProductTab.Visible = checkBox1.Checked;
                 groupsNameComb_AddProductTab.Visible = !checkBox1.Checked;
-
             }
         }
 

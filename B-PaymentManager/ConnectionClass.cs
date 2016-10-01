@@ -69,6 +69,7 @@ namespace B_PaymentManager
             catch (Exception ex)
             {
                 MessageBox.Show("خطا ف العملية برجاء اعد المحاولة");
+                Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ". [" + this.ToString() + "] Line " + 72);
             }
         }
 

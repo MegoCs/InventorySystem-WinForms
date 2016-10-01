@@ -2,7 +2,7 @@
 {
 
 
-    partial class ClientReportDataSet1
+    partial class GardReportDataSet
     {
         partial class DataTable1DataTable
         {

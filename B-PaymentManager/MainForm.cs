@@ -18,6 +18,7 @@ namespace B_PaymentManager
         AddClient addClient;
         ClientPaymentManger clientPaymentManger;
         ProductsShortageReport shortageForm;
+        GardReport gardForm;
 
         public MainForm()
         {
@@ -28,6 +29,7 @@ namespace B_PaymentManager
 
         private void tabControl1_DrawItem(Object sender, System.Windows.Forms.DrawItemEventArgs e)
         {
+            try{ 
             Graphics g = e.Graphics;
             Brush _textBrush;
 
@@ -59,6 +61,12 @@ namespace B_PaymentManager
             _stringFlags.LineAlignment = StringAlignment.Center;
             g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
         }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("خطأ عام من برجاء الاغلاق و المحاولة مره اخرى");
+                    Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
+                }
+}
 
         private void addNewClientBtn_SalesTab_Click(object sender, EventArgs e)
         {
@@ -67,7 +75,8 @@ namespace B_PaymentManager
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex == 1)
+            try{
+                if (tabControl1.SelectedIndex == 1)
             {
                 sellOp = new SellingOperation();
                 sellOp.ShowDialog();
@@ -92,11 +101,18 @@ namespace B_PaymentManager
                 shortageForm = new ProductsShortageReport();
                 shortageForm.ShowDialog();
             }
-            if (tabControl1.SelectedIndex == 5)
+            if (tabControl1.SelectedIndex == 6)
             {
-
+                gardForm = new GardReport();
+                gardForm.ShowDialog();
             }
         }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("خطأ عام من برجاء الاغلاق و المحاولة مره اخرى");
+                    Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
+                }
+}
 
         private void MainForm_Load(object sender, EventArgs e)
         {

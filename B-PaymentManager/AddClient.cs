@@ -24,15 +24,25 @@ namespace B_PaymentManager
 
         private void saveBtn_AddClientTab_Click(object sender, EventArgs e)
         {
-            dbConObj.startConnection();
-            String sql = "insert into Clients (client_name,client_phone,client_address,client_national_id) values ('"+clientNameTxt_AddClientTab.Text+ "','" + clientPhoneTxt_AddClientTab.Text + "','" + clientAddressTxt_AddClientTab.Text + "','" + clientNationalIdTxt_AddClientTab.Text + "') ";
-            dbConObj.SQLUPDATE(sql,true);
-            clientName = clientNameTxt_AddClientTab.Text;
-            clientNameTxt_AddClientTab.Text = "";
-            clientAddressTxt_AddClientTab.Text = "";
-            clientPhoneTxt_AddClientTab.Text = "";
-            clientNationalIdTxt_AddClientTab.Text = "";
-            FunctionsClass ss = new FunctionsClass();
+            if (clientNameTxt_AddClientTab.Text!=""&&clientNationalIdTxt_AddClientTab.Text!="") {
+                try {
+                    dbConObj.startConnection();
+                    String sql = "insert into Clients (client_name,client_phone,client_address,client_national_id) values ('" + clientNameTxt_AddClientTab.Text + "','" + clientPhoneTxt_AddClientTab.Text + "','" + clientAddressTxt_AddClientTab.Text + "','" + clientNationalIdTxt_AddClientTab.Text + "') ";
+                    dbConObj.SQLUPDATE(sql, true);
+                    clientName = clientNameTxt_AddClientTab.Text;
+                    clientNameTxt_AddClientTab.Text = "";
+                    clientAddressTxt_AddClientTab.Text = "";
+                    clientPhoneTxt_AddClientTab.Text = "";
+                    clientNationalIdTxt_AddClientTab.Text = "";
+                    FunctionsClass ss = new FunctionsClass();
+                    Logger.WriteLog("client was added");
+                }
+                catch (Exception ex) {
+                    MessageBox.Show("خطأ اثناء اضافه البيانات");
+                    Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
+                }
+
+            }
         }
     }
 }

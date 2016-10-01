@@ -35,9 +35,10 @@ namespace B_PaymentManager
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("خطأ ف البيانات المدخلة");
+                    MessageBox.Show("خطأ فى ادخال البيانات");
+                    Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
                 }
-             }
+            }
         }
     }
 }

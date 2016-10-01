@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1_Sales = new System.Windows.Forms.Panel();
             this.billTotalPriceLab_SalesTab = new System.Windows.Forms.Label();
             this.billTotalPaidLab_SalesTab = new System.Windows.Forms.Label();
@@ -213,7 +213,7 @@
             // productPaidValueTxt_SalesTab
             // 
             this.productPaidValueTxt_SalesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.productPaidValueTxt_SalesTab.Location = new System.Drawing.Point(184, 137);
+            this.productPaidValueTxt_SalesTab.Location = new System.Drawing.Point(537, 136);
             this.productPaidValueTxt_SalesTab.Name = "productPaidValueTxt_SalesTab";
             this.productPaidValueTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productPaidValueTxt_SalesTab.Size = new System.Drawing.Size(130, 26);
@@ -226,7 +226,7 @@
             this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(184, 97);
+            this.label11.Location = new System.Drawing.Point(538, 95);
             this.label11.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(130, 31);
@@ -289,13 +289,13 @@
             // productOldPriceLab_SalesTab
             // 
             this.productOldPriceLab_SalesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.productOldPriceLab_SalesTab.Location = new System.Drawing.Point(676, 138);
+            this.productOldPriceLab_SalesTab.Location = new System.Drawing.Point(676, 135);
             this.productOldPriceLab_SalesTab.Name = "productOldPriceLab_SalesTab";
             this.productOldPriceLab_SalesTab.ReadOnly = true;
             this.productOldPriceLab_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productOldPriceLab_SalesTab.Size = new System.Drawing.Size(113, 26);
             this.productOldPriceLab_SalesTab.TabIndex = 81;
-            this.productOldPriceLab_SalesTab.Text = "0.0";
+            this.productOldPriceLab_SalesTab.Text = "0";
             this.productOldPriceLab_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label1
@@ -308,7 +308,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 32);
             this.label1.TabIndex = 80;
-            this.label1.Text = "السعر القديم";
+            this.label1.Text = "سعر الكاش";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label9
@@ -316,7 +316,7 @@
             this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(25, 97);
+            this.label9.Location = new System.Drawing.Point(25, 15);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label9.Size = new System.Drawing.Size(153, 30);
@@ -329,7 +329,7 @@
             this.productAvailableLab_SalesTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.productAvailableLab_SalesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.productAvailableLab_SalesTab.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.productAvailableLab_SalesTab.Location = new System.Drawing.Point(490, 137);
+            this.productAvailableLab_SalesTab.Location = new System.Drawing.Point(346, 136);
             this.productAvailableLab_SalesTab.Name = "productAvailableLab_SalesTab";
             this.productAvailableLab_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productAvailableLab_SalesTab.Size = new System.Drawing.Size(64, 26);
@@ -341,7 +341,7 @@
             this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(490, 95);
+            this.label10.Location = new System.Drawing.Point(346, 94);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label10.Size = new System.Drawing.Size(64, 33);
@@ -355,7 +355,7 @@
             this.dateTimePicker1_SalesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.dateTimePicker1_SalesTab.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1_SalesTab.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker1_SalesTab.Location = new System.Drawing.Point(24, 134);
+            this.dateTimePicker1_SalesTab.Location = new System.Drawing.Point(24, 52);
             this.dateTimePicker1_SalesTab.Name = "dateTimePicker1_SalesTab";
             this.dateTimePicker1_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateTimePicker1_SalesTab.Size = new System.Drawing.Size(154, 26);
@@ -388,10 +388,10 @@
             // productTotalPriceTxt_SalesTab
             // 
             this.productTotalPriceTxt_SalesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.productTotalPriceTxt_SalesTab.Location = new System.Drawing.Point(327, 136);
+            this.productTotalPriceTxt_SalesTab.Location = new System.Drawing.Point(25, 135);
             this.productTotalPriceTxt_SalesTab.Name = "productTotalPriceTxt_SalesTab";
             this.productTotalPriceTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.productTotalPriceTxt_SalesTab.Size = new System.Drawing.Size(96, 26);
+            this.productTotalPriceTxt_SalesTab.Size = new System.Drawing.Size(255, 26);
             this.productTotalPriceTxt_SalesTab.TabIndex = 71;
             this.productTotalPriceTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -399,30 +399,30 @@
             // 
             this.productQuantatyTxt_SalesTab.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.productQuantatyTxt_SalesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.productQuantatyTxt_SalesTab.Location = new System.Drawing.Point(428, 137);
+            this.productQuantatyTxt_SalesTab.Location = new System.Drawing.Point(284, 136);
             this.productQuantatyTxt_SalesTab.Name = "productQuantatyTxt_SalesTab";
             this.productQuantatyTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productQuantatyTxt_SalesTab.Size = new System.Drawing.Size(58, 26);
             this.productQuantatyTxt_SalesTab.TabIndex = 2;
             this.productQuantatyTxt_SalesTab.Text = "0";
             this.productQuantatyTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.productQuantatyTxt_SalesTab.TextChanged += new System.EventHandler(this.productQuantatyTxt_SalesTab_TextChanged);
+            this.productQuantatyTxt_SalesTab.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productQuantatyTxt_SalesTab_KeyDown);
             // 
             // productPriceTxt_SalesTab
             // 
             this.productPriceTxt_SalesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.productPriceTxt_SalesTab.Location = new System.Drawing.Point(557, 137);
+            this.productPriceTxt_SalesTab.Location = new System.Drawing.Point(418, 136);
             this.productPriceTxt_SalesTab.Name = "productPriceTxt_SalesTab";
             this.productPriceTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productPriceTxt_SalesTab.Size = new System.Drawing.Size(113, 26);
             this.productPriceTxt_SalesTab.TabIndex = 1;
-            this.productPriceTxt_SalesTab.Text = "0.0";
+            this.productPriceTxt_SalesTab.Text = "0";
             this.productPriceTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // productCodeTxt_SalesTab
             // 
             this.productCodeTxt_SalesTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.productCodeTxt_SalesTab.Location = new System.Drawing.Point(797, 137);
+            this.productCodeTxt_SalesTab.Location = new System.Drawing.Point(797, 135);
             this.productCodeTxt_SalesTab.Name = "productCodeTxt_SalesTab";
             this.productCodeTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productCodeTxt_SalesTab.Size = new System.Drawing.Size(103, 26);
@@ -436,14 +436,14 @@
             this.sellingDataGrid_SalesTab.AllowUserToResizeRows = false;
             this.sellingDataGrid_SalesTab.BackgroundColor = System.Drawing.Color.LightGray;
             this.sellingDataGrid_SalesTab.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sellingDataGrid_SalesTab.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sellingDataGrid_SalesTab.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.sellingDataGrid_SalesTab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sellingDataGrid_SalesTab.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -461,8 +461,8 @@
             this.sellingDataGrid_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sellingDataGrid_SalesTab.RowHeadersVisible = false;
             this.sellingDataGrid_SalesTab.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellingDataGrid_SalesTab.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellingDataGrid_SalesTab.RowsDefaultCellStyle = dataGridViewCellStyle35;
             this.sellingDataGrid_SalesTab.RowTemplate.ErrorText = "No data here";
             this.sellingDataGrid_SalesTab.RowTemplate.Height = 30;
             this.sellingDataGrid_SalesTab.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -475,8 +475,8 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle30;
             this.Column1.HeaderText = "اسم الصنف";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -484,8 +484,8 @@
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle31;
             this.Column5.HeaderText = "كود الصنف";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -493,8 +493,8 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle32;
             this.Column2.HeaderText = "سعر البيع";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -502,8 +502,8 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle33;
             this.Column3.HeaderText = "الكمية";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -511,8 +511,8 @@
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle34;
             this.Column4.HeaderText = "سعر الكلى";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -529,10 +529,10 @@
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(327, 96);
+            this.label5.Location = new System.Drawing.Point(25, 94);
             this.label5.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(96, 31);
+            this.label5.Size = new System.Drawing.Size(255, 32);
             this.label5.TabIndex = 66;
             this.label5.Text = "الاجمالى";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -542,12 +542,12 @@
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(557, 95);
+            this.label4.Location = new System.Drawing.Point(418, 94);
             this.label4.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 33);
             this.label4.TabIndex = 65;
-            this.label4.Text = "البيع";
+            this.label4.Text = "سعر القسط";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
@@ -555,7 +555,7 @@
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(428, 95);
+            this.label3.Location = new System.Drawing.Point(284, 94);
             this.label3.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 32);

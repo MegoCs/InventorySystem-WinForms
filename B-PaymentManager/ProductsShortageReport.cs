@@ -19,10 +19,17 @@ namespace B_PaymentManager
 
         private void ProductsShortageReport_Load(object sender, EventArgs e)
         {
+            try{ 
             // TODO: This line of code loads data into the 'ProductsShortage.Products' table. You can move, or remove it, as needed.
             this.ProductsTableAdapter.Fill(this.ProductsShortage.Products);
 
             this.reportViewer1.RefreshReport();
         }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("خطأ اثناء عرض التقرير");
+                    Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
+                }
+}
     }
 }

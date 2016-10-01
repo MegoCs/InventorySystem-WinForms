@@ -65,19 +65,19 @@
             // 
             // userNameTxt
             // 
-            this.userNameTxt.Location = new System.Drawing.Point(78, 20);
+            this.userNameTxt.Location = new System.Drawing.Point(78, 53);
             this.userNameTxt.Name = "userNameTxt";
+            this.userNameTxt.PasswordChar = '*';
             this.userNameTxt.Size = new System.Drawing.Size(135, 20);
-            this.userNameTxt.TabIndex = 0;
+            this.userNameTxt.TabIndex = 1;
             this.userNameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // userPassTxt
             // 
-            this.userPassTxt.Location = new System.Drawing.Point(78, 57);
+            this.userPassTxt.Location = new System.Drawing.Point(78, 17);
             this.userPassTxt.Name = "userPassTxt";
-            this.userPassTxt.PasswordChar = '*';
             this.userPassTxt.Size = new System.Drawing.Size(135, 20);
-            this.userPassTxt.TabIndex = 1;
+            this.userPassTxt.TabIndex = 0;
             this.userPassTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LoginForm
