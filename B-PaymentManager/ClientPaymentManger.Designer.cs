@@ -37,11 +37,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.deleteItemsBtn = new System.Windows.Forms.Button();
             this.printedReportBtn = new System.Windows.Forms.Button();
             this.newPayment = new System.Windows.Forms.Button();
             this.detailsGrid = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.deleteItemsBtn = new System.Windows.Forms.Button();
+            this.paymetReportButtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.detailsGrid)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +102,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.paymetReportButtn);
             this.panel1.Controls.Add(this.deleteItemsBtn);
             this.panel1.Controls.Add(this.printedReportBtn);
             this.panel1.Controls.Add(this.newPayment);
@@ -116,6 +118,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1095, 444);
             this.panel1.TabIndex = 5;
+            // 
+            // deleteItemsBtn
+            // 
+            this.deleteItemsBtn.Location = new System.Drawing.Point(85, 401);
+            this.deleteItemsBtn.Name = "deleteItemsBtn";
+            this.deleteItemsBtn.Size = new System.Drawing.Size(129, 31);
+            this.deleteItemsBtn.TabIndex = 18;
+            this.deleteItemsBtn.Text = "مرتجع";
+            this.deleteItemsBtn.UseVisualStyleBackColor = true;
+            this.deleteItemsBtn.Click += new System.EventHandler(this.deleteItemsBtn_Click);
             // 
             // printedReportBtn
             // 
@@ -196,15 +208,15 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "الاصناف المدونة على الفاتورة";
             // 
-            // deleteItemsBtn
+            // paymetReportButtn
             // 
-            this.deleteItemsBtn.Location = new System.Drawing.Point(85, 401);
-            this.deleteItemsBtn.Name = "deleteItemsBtn";
-            this.deleteItemsBtn.Size = new System.Drawing.Size(129, 31);
-            this.deleteItemsBtn.TabIndex = 18;
-            this.deleteItemsBtn.Text = "مرتجع";
-            this.deleteItemsBtn.UseVisualStyleBackColor = true;
-            this.deleteItemsBtn.Click += new System.EventHandler(this.deleteItemsBtn_Click);
+            this.paymetReportButtn.Location = new System.Drawing.Point(523, 401);
+            this.paymetReportButtn.Name = "paymetReportButtn";
+            this.paymetReportButtn.Size = new System.Drawing.Size(213, 30);
+            this.paymetReportButtn.TabIndex = 19;
+            this.paymetReportButtn.Text = "تقرير الاقساط المفصل";
+            this.paymetReportButtn.UseVisualStyleBackColor = true;
+            this.paymetReportButtn.Click += new System.EventHandler(this.paymetReportButtn_Click);
             // 
             // ClientPaymentManger
             // 
@@ -239,5 +251,6 @@
         private System.Windows.Forms.Button newPayment;
         private System.Windows.Forms.Button printedReportBtn;
         private System.Windows.Forms.Button deleteItemsBtn;
+        private System.Windows.Forms.Button paymetReportButtn;
     }
 }

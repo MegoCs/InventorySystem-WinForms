@@ -92,7 +92,7 @@ namespace B_PaymentManager
                             productAvailableLab_SalesTab.Text = dbConObj.myReader["product_avail_quant"].ToString();
                             productCodeTxt_SalesTab.Text = dbConObj.myReader["id"].ToString();
                             productOldPriceLab_SalesTab.Text = dbConObj.myReader["product_price"].ToString();
-                            this.ActiveControl = productPriceTxt_SalesTab;
+                            this.ActiveControl = productPaidValueTxt_SalesTab;
                         }
                     }
                 }
@@ -106,21 +106,7 @@ namespace B_PaymentManager
 
         private void productPaidValueTxt_SalesTab_KeyDown(object sender, KeyEventArgs e)
         {
-            try
-            {
-                if (e.KeyCode == Keys.Enter)
-                {
-                    productsList.Add(new BillsProducts(productNameTxt_SalesTab.Text, int.Parse(productPriceTxt_SalesTab.Text), int.Parse(productQuantatyTxt_SalesTab.Text), int.Parse(productTotalPriceTxt_SalesTab.Text), int.Parse(productPaidValueTxt_SalesTab.Text), int.Parse(productCodeTxt_SalesTab.Text)));
-                    sellingDataGrid_SalesTab.Rows.Add(productNameTxt_SalesTab.Text, productCodeTxt_SalesTab.Text, productPriceTxt_SalesTab.Text, productQuantatyTxt_SalesTab.Text, productTotalPriceTxt_SalesTab.Text, productPaidValueTxt_SalesTab.Text);
-                    ClearTextFileds();
-                    UpdateDownLabels();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("خطأ فى البيانات");
-                Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
-            }
+            
         }
 
         private void UpdateDownLabels()
@@ -165,8 +151,8 @@ namespace B_PaymentManager
         {
             productNameTxt_SalesTab.Text = "";
             productCodeTxt_SalesTab.Text = "0";
-            productOldPriceLab_SalesTab.Text = "0.0";
-            productPriceTxt_SalesTab.Text = "0.0";
+            productOldPriceLab_SalesTab.Text = "0";
+            productPriceTxt_SalesTab.Text = "0";
             productAvailableLab_SalesTab.Text = "0";
             productQuantatyTxt_SalesTab.Text = "0";
             productTotalPriceTxt_SalesTab.Text = "0";
@@ -270,7 +256,7 @@ namespace B_PaymentManager
                         MessageBox.Show("كمية اكبر من المتاح برجاء الانتباه");
                         return;
                     }
-                    int p = int.Parse(productPriceTxt_SalesTab.Text);
+                    int p = int.Parse(productPriceTxt_SalesTab.Text)+int.Parse(productOldPriceLab_SalesTab.Text);
                     productTotalPriceTxt_SalesTab.Text = (p * q).ToString();
                 }
                 catch (Exception ex)
@@ -278,6 +264,25 @@ namespace B_PaymentManager
                     MessageBox.Show("خطأ");
                     Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ". [" + this.Name + "] Line " + 281);
                 }
+            }
+        }
+
+        private void productTotalPriceTxt_SalesTab_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    productsList.Add(new BillsProducts(productNameTxt_SalesTab.Text, int.Parse(productPriceTxt_SalesTab.Text)+int.Parse(productOldPriceLab_SalesTab.Text), int.Parse(productQuantatyTxt_SalesTab.Text), int.Parse(productTotalPriceTxt_SalesTab.Text), int.Parse(productPaidValueTxt_SalesTab.Text), int.Parse(productCodeTxt_SalesTab.Text)));
+                    sellingDataGrid_SalesTab.Rows.Add(productNameTxt_SalesTab.Text, productCodeTxt_SalesTab.Text, (int.Parse(productPriceTxt_SalesTab.Text) + int.Parse(productOldPriceLab_SalesTab.Text)).ToString(), productQuantatyTxt_SalesTab.Text, productTotalPriceTxt_SalesTab.Text, productPaidValueTxt_SalesTab.Text);
+                    ClearTextFileds();
+                    UpdateDownLabels();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("خطأ فى البيانات");
+                Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
             }
         }
     }

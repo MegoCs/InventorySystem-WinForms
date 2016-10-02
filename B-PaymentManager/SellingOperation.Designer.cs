@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle53 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle54 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1_Sales = new System.Windows.Forms.Panel();
             this.billTotalPriceLab_SalesTab = new System.Windows.Forms.Label();
             this.billTotalPaidLab_SalesTab = new System.Windows.Forms.Label();
@@ -217,7 +217,7 @@
             this.productPaidValueTxt_SalesTab.Name = "productPaidValueTxt_SalesTab";
             this.productPaidValueTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productPaidValueTxt_SalesTab.Size = new System.Drawing.Size(130, 26);
-            this.productPaidValueTxt_SalesTab.TabIndex = 3;
+            this.productPaidValueTxt_SalesTab.TabIndex = 1;
             this.productPaidValueTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.productPaidValueTxt_SalesTab.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productPaidValueTxt_SalesTab_KeyDown);
             // 
@@ -392,8 +392,9 @@
             this.productTotalPriceTxt_SalesTab.Name = "productTotalPriceTxt_SalesTab";
             this.productTotalPriceTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productTotalPriceTxt_SalesTab.Size = new System.Drawing.Size(255, 26);
-            this.productTotalPriceTxt_SalesTab.TabIndex = 71;
+            this.productTotalPriceTxt_SalesTab.TabIndex = 4;
             this.productTotalPriceTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.productTotalPriceTxt_SalesTab.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productTotalPriceTxt_SalesTab_KeyDown);
             // 
             // productQuantatyTxt_SalesTab
             // 
@@ -403,7 +404,7 @@
             this.productQuantatyTxt_SalesTab.Name = "productQuantatyTxt_SalesTab";
             this.productQuantatyTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productQuantatyTxt_SalesTab.Size = new System.Drawing.Size(58, 26);
-            this.productQuantatyTxt_SalesTab.TabIndex = 2;
+            this.productQuantatyTxt_SalesTab.TabIndex = 3;
             this.productQuantatyTxt_SalesTab.Text = "0";
             this.productQuantatyTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.productQuantatyTxt_SalesTab.KeyDown += new System.Windows.Forms.KeyEventHandler(this.productQuantatyTxt_SalesTab_KeyDown);
@@ -415,7 +416,7 @@
             this.productPriceTxt_SalesTab.Name = "productPriceTxt_SalesTab";
             this.productPriceTxt_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.productPriceTxt_SalesTab.Size = new System.Drawing.Size(113, 26);
-            this.productPriceTxt_SalesTab.TabIndex = 1;
+            this.productPriceTxt_SalesTab.TabIndex = 2;
             this.productPriceTxt_SalesTab.Text = "0";
             this.productPriceTxt_SalesTab.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -436,14 +437,14 @@
             this.sellingDataGrid_SalesTab.AllowUserToResizeRows = false;
             this.sellingDataGrid_SalesTab.BackgroundColor = System.Drawing.Color.LightGray;
             this.sellingDataGrid_SalesTab.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.sellingDataGrid_SalesTab.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle50.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.sellingDataGrid_SalesTab.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle50;
             this.sellingDataGrid_SalesTab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.sellingDataGrid_SalesTab.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -461,8 +462,8 @@
             this.sellingDataGrid_SalesTab.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.sellingDataGrid_SalesTab.RowHeadersVisible = false;
             this.sellingDataGrid_SalesTab.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sellingDataGrid_SalesTab.RowsDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle56.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sellingDataGrid_SalesTab.RowsDefaultCellStyle = dataGridViewCellStyle56;
             this.sellingDataGrid_SalesTab.RowTemplate.ErrorText = "No data here";
             this.sellingDataGrid_SalesTab.RowTemplate.Height = 30;
             this.sellingDataGrid_SalesTab.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -475,8 +476,8 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle51;
             this.Column1.HeaderText = "اسم الصنف";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -484,8 +485,8 @@
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle52.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle52;
             this.Column5.HeaderText = "كود الصنف";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -493,8 +494,8 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle53.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle53;
             this.Column2.HeaderText = "سعر البيع";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -502,8 +503,8 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle54.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle54;
             this.Column3.HeaderText = "الكمية";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -511,8 +512,8 @@
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle55.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Column4.DefaultCellStyle = dataGridViewCellStyle55;
             this.Column4.HeaderText = "سعر الكلى";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;

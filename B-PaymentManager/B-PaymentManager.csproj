@@ -98,6 +98,11 @@
       <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="BillsProducts.cs" />
+    <Compile Include="ClientPaymentHistoryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClientPaymentHistoryDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ClientPaymentManger.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +121,12 @@
       <DependentUpon>ClientReportDataSet0.xsd</DependentUpon>
     </Compile>
     <Compile Include="ComboBoxItem.cs" />
+    <Compile Include="ConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfigForm.Designer.cs">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionClass.cs" />
     <Compile Include="FunctionsClass.cs" />
     <Compile Include="GardReport.cs">
@@ -144,6 +155,18 @@
     </Compile>
     <Compile Include="NewPayment.Designer.cs">
       <DependentUpon>NewPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartnershipManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartnershipManagement.Designer.cs">
+      <DependentUpon>PartnershipManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentHistoryReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentHistoryReportForm.Designer.cs">
+      <DependentUpon>PaymentHistoryReportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductQuantaty.cs">
       <SubType>Form</SubType>
@@ -189,6 +212,9 @@
     <EmbeddedResource Include="ClientReport0.resx">
       <DependentUpon>ClientReport0.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ConfigForm.resx">
+      <DependentUpon>ConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gard.rdlc" />
     <EmbeddedResource Include="GardReport.resx">
       <DependentUpon>GardReport.cs</DependentUpon>
@@ -198,6 +224,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NewPayment.resx">
       <DependentUpon>NewPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartnershipManagement.resx">
+      <DependentUpon>PartnershipManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentHistoryReport.rdlc" />
+    <EmbeddedResource Include="PaymentHistoryReportForm.resx">
+      <DependentUpon>PaymentHistoryReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductQuantaty.resx">
       <DependentUpon>ProductQuantaty.cs</DependentUpon>
@@ -223,6 +256,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ShortageReport1.rdlc" />
     <None Include="B-PaymentManager_TemporaryKey.pfx" />
+    <None Include="ClientPaymentHistoryDataSet.xsc">
+      <DependentUpon>ClientPaymentHistoryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClientPaymentHistoryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClientPaymentHistoryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClientPaymentHistoryDataSet.xss">
+      <DependentUpon>ClientPaymentHistoryDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ClientReportDataSet0.xsc">
       <DependentUpon>ClientReportDataSet0.xsd</DependentUpon>
     </None>
@@ -288,6 +332,58 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

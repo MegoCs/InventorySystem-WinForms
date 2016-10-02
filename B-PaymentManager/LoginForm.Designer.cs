@@ -37,9 +37,9 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(78, 86);
+            this.loginBtn.Location = new System.Drawing.Point(48, 86);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(135, 23);
+            this.loginBtn.Size = new System.Drawing.Size(165, 23);
             this.loginBtn.TabIndex = 2;
             this.loginBtn.Text = "تسجيل الدخول";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -65,18 +65,18 @@
             // 
             // userNameTxt
             // 
-            this.userNameTxt.Location = new System.Drawing.Point(78, 53);
+            this.userNameTxt.Location = new System.Drawing.Point(48, 17);
             this.userNameTxt.Name = "userNameTxt";
             this.userNameTxt.PasswordChar = '*';
-            this.userNameTxt.Size = new System.Drawing.Size(135, 20);
+            this.userNameTxt.Size = new System.Drawing.Size(165, 20);
             this.userNameTxt.TabIndex = 1;
             this.userNameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // userPassTxt
             // 
-            this.userPassTxt.Location = new System.Drawing.Point(78, 17);
+            this.userPassTxt.Location = new System.Drawing.Point(48, 53);
             this.userPassTxt.Name = "userPassTxt";
-            this.userPassTxt.Size = new System.Drawing.Size(135, 20);
+            this.userPassTxt.Size = new System.Drawing.Size(165, 20);
             this.userPassTxt.TabIndex = 0;
             this.userPassTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 

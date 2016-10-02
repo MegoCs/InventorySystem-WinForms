@@ -36,6 +36,8 @@
             this.AddClientTab = new System.Windows.Forms.TabPage();
             this.ProductShortageReportTab = new System.Windows.Forms.TabPage();
             this.GardTab = new System.Windows.Forms.TabPage();
+            this.DataSettings = new System.Windows.Forms.TabPage();
+            this.PartnerShipSettings = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +54,8 @@
             this.tabControl1.Controls.Add(this.AddClientTab);
             this.tabControl1.Controls.Add(this.ProductShortageReportTab);
             this.tabControl1.Controls.Add(this.GardTab);
+            this.tabControl1.Controls.Add(this.PartnerShipSettings);
+            this.tabControl1.Controls.Add(this.DataSettings);
             this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(50, 150);
@@ -133,6 +137,24 @@
             this.GardTab.TabIndex = 7;
             this.GardTab.Text = "تقارير الجرد";
             // 
+            // DataSettings
+            // 
+            this.DataSettings.BackColor = System.Drawing.Color.Transparent;
+            this.DataSettings.Location = new System.Drawing.Point(4, 4);
+            this.DataSettings.Name = "DataSettings";
+            this.DataSettings.Size = new System.Drawing.Size(875, 484);
+            this.DataSettings.TabIndex = 8;
+            this.DataSettings.Text = "اعدادات البيانات";
+            // 
+            // PartnerShipSettings
+            // 
+            this.PartnerShipSettings.BackColor = System.Drawing.Color.Transparent;
+            this.PartnerShipSettings.Location = new System.Drawing.Point(4, 4);
+            this.PartnerShipSettings.Name = "PartnerShipSettings";
+            this.PartnerShipSettings.Size = new System.Drawing.Size(875, 484);
+            this.PartnerShipSettings.TabIndex = 9;
+            this.PartnerShipSettings.Text = "بيانات الشراكه";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,5 +181,7 @@
         private System.Windows.Forms.TabPage AddClientTab;
         private System.Windows.Forms.TabPage ProductShortageReportTab;
         private System.Windows.Forms.TabPage GardTab;
+        private System.Windows.Forms.TabPage PartnerShipSettings;
+        private System.Windows.Forms.TabPage DataSettings;
     }
 }

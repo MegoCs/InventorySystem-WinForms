@@ -41,8 +41,8 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT ID, product_name, product_group_id, product_avail_quant, product_risk_quant, product_price FROM Products</CommandText>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT ID, product_name, product_group_id, product_avail_quant, product_risk_quant, product_price, product_avail_quant*product_price As moneyValue  FROM Products</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -78,6 +78,7 @@
               <Mapping SourceColumn="product_avail_quant" DataSetColumn="product_avail_quant" />
               <Mapping SourceColumn="product_risk_quant" DataSetColumn="product_risk_quant" />
               <Mapping SourceColumn="product_price" DataSetColumn="product_price" />
+              <Mapping SourceColumn="moneyValue" DataSetColumn="moneyValue" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -132,7 +133,7 @@ WHERE        (payDate between @date1 and @date2)</CommandText>
   <xs:element name="GardReportDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="GardReportDataSet" msprop:Generator_UserDSName="GardReportDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Products" msprop:Generator_TableClassName="ProductsDataTable" msprop:Generator_TableVarName="tableProducts" msprop:Generator_TablePropName="Products" msprop:Generator_RowDeletingName="ProductsRowDeleting" msprop:Generator_RowChangingName="ProductsRowChanging" msprop:Generator_RowEvHandlerName="ProductsRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductsRowDeleted" msprop:Generator_UserTableName="Products" msprop:Generator_RowChangedName="ProductsRowChanged" msprop:Generator_RowEvArgName="ProductsRowChangeEvent" msprop:Generator_RowClassName="ProductsRow">
+        <xs:element name="Products" msprop:Generator_TableClassName="ProductsDataTable" msprop:Generator_TableVarName="tableProducts" msprop:Generator_RowChangedName="ProductsRowChanged" msprop:Generator_TablePropName="Products" msprop:Generator_RowDeletingName="ProductsRowDeleting" msprop:Generator_RowChangingName="ProductsRowChanging" msprop:Generator_RowEvHandlerName="ProductsRowChangeEventHandler" msprop:Generator_RowDeletedName="ProductsRowDeleted" msprop:Generator_RowClassName="ProductsRow" msprop:Generator_UserTableName="Products" msprop:Generator_RowEvArgName="ProductsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
@@ -147,17 +148,18 @@ WHERE        (payDate between @date1 and @date2)</CommandText>
               <xs:element name="product_avail_quant" msprop:Generator_ColumnVarNameInTable="columnproduct_avail_quant" msprop:Generator_ColumnPropNameInRow="product_avail_quant" msprop:Generator_ColumnPropNameInTable="product_avail_quantColumn" msprop:Generator_UserColumnName="product_avail_quant" type="xs:int" minOccurs="0" />
               <xs:element name="product_risk_quant" msprop:Generator_ColumnVarNameInTable="columnproduct_risk_quant" msprop:Generator_ColumnPropNameInRow="product_risk_quant" msprop:Generator_ColumnPropNameInTable="product_risk_quantColumn" msprop:Generator_UserColumnName="product_risk_quant" type="xs:int" minOccurs="0" />
               <xs:element name="product_price" msprop:Generator_ColumnVarNameInTable="columnproduct_price" msprop:Generator_ColumnPropNameInRow="product_price" msprop:Generator_ColumnPropNameInTable="product_priceColumn" msprop:Generator_UserColumnName="product_price" type="xs:int" minOccurs="0" />
+              <xs:element name="moneyValue" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnmoneyValue" msprop:Generator_ColumnPropNameInRow="moneyValue" msprop:Generator_ColumnPropNameInTable="moneyValueColumn" msprop:Generator_UserColumnName="moneyValue" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowClassName="DataTable2Row">
+        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_RowClassName="DataTable2Row" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TotalMoadmat" msprop:Generator_ColumnVarNameInTable="columnTotalMoadmat" msprop:Generator_ColumnPropNameInRow="TotalMoadmat" msprop:Generator_ColumnPropNameInTable="TotalMoadmatColumn" msprop:Generator_UserColumnName="TotalMoadmat" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable3" msprop:Generator_TableClassName="DataTable3DataTable" msprop:Generator_TableVarName="tableDataTable3" msprop:Generator_TablePropName="DataTable3" msprop:Generator_RowDeletingName="DataTable3RowDeleting" msprop:Generator_RowChangingName="DataTable3RowChanging" msprop:Generator_RowEvHandlerName="DataTable3RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable3RowDeleted" msprop:Generator_UserTableName="DataTable3" msprop:Generator_RowChangedName="DataTable3RowChanged" msprop:Generator_RowEvArgName="DataTable3RowChangeEvent" msprop:Generator_RowClassName="DataTable3Row">
+        <xs:element name="DataTable3" msprop:Generator_TableClassName="DataTable3DataTable" msprop:Generator_TableVarName="tableDataTable3" msprop:Generator_RowChangedName="DataTable3RowChanged" msprop:Generator_TablePropName="DataTable3" msprop:Generator_RowDeletingName="DataTable3RowDeleting" msprop:Generator_RowChangingName="DataTable3RowChanging" msprop:Generator_RowEvHandlerName="DataTable3RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable3RowDeleted" msprop:Generator_RowClassName="DataTable3Row" msprop:Generator_UserTableName="DataTable3" msprop:Generator_RowEvArgName="DataTable3RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TotalAqsat" msprop:Generator_ColumnVarNameInTable="columnTotalAqsat" msprop:Generator_ColumnPropNameInRow="TotalAqsat" msprop:Generator_ColumnPropNameInTable="TotalAqsatColumn" msprop:Generator_UserColumnName="TotalAqsat" type="xs:double" minOccurs="0" />

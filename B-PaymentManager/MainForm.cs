@@ -19,6 +19,8 @@ namespace B_PaymentManager
         ClientPaymentManger clientPaymentManger;
         ProductsShortageReport shortageForm;
         GardReport gardForm;
+        private ConfigForm configForm;
+        private PartnershipManagement partnershipFram;
 
         public MainForm()
         {
@@ -29,44 +31,45 @@ namespace B_PaymentManager
 
         private void tabControl1_DrawItem(Object sender, System.Windows.Forms.DrawItemEventArgs e)
         {
-            try{ 
-            Graphics g = e.Graphics;
-            Brush _textBrush;
-
-            // Get the item from the collection.
-            TabPage _tabPage = tabControl1.TabPages[e.Index];
-
-            // Get the real bounds for the tab rectangle.
-            Rectangle _tabBounds = tabControl1.GetTabRect(e.Index);
-
-            if (e.State == DrawItemState.Selected)
+            try
             {
+                Graphics g = e.Graphics;
+                Brush _textBrush;
 
-                // Draw a different background color, and don't paint a focus rectangle.
-                _textBrush = new SolidBrush(Color.Red);
-                g.FillRectangle(Brushes.Gray, e.Bounds);
-            }
-            else
-            {
-                _textBrush = new System.Drawing.SolidBrush(e.ForeColor);
-                e.DrawBackground();
-            }
+                // Get the item from the collection.
+                TabPage _tabPage = tabControl1.TabPages[e.Index];
 
-            // Use our own font.
-            Font _tabFont = new Font("Arial", (float)24.0, FontStyle.Bold, GraphicsUnit.Pixel);
+                // Get the real bounds for the tab rectangle.
+                Rectangle _tabBounds = tabControl1.GetTabRect(e.Index);
 
-            // Draw string. Center the text.
-            StringFormat _stringFlags = new StringFormat();
-            _stringFlags.Alignment = StringAlignment.Center;
-            _stringFlags.LineAlignment = StringAlignment.Center;
-            g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
-        }
-                catch (Exception ex)
+                if (e.State == DrawItemState.Selected)
                 {
-                    MessageBox.Show("خطأ عام من برجاء الاغلاق و المحاولة مره اخرى");
-                    Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
+
+                    // Draw a different background color, and don't paint a focus rectangle.
+                    _textBrush = new SolidBrush(Color.Red);
+                    g.FillRectangle(Brushes.Gray, e.Bounds);
                 }
-}
+                else
+                {
+                    _textBrush = new System.Drawing.SolidBrush(e.ForeColor);
+                    e.DrawBackground();
+                }
+
+                // Use our own font.
+                Font _tabFont = new Font("Arial", (float)24.0, FontStyle.Bold, GraphicsUnit.Pixel);
+
+                // Draw string. Center the text.
+                StringFormat _stringFlags = new StringFormat();
+                _stringFlags.Alignment = StringAlignment.Center;
+                _stringFlags.LineAlignment = StringAlignment.Center;
+                g.DrawString(_tabPage.Text, _tabFont, _textBrush, _tabBounds, new StringFormat(_stringFlags));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("خطأ عام من برجاء الاغلاق و المحاولة مره اخرى");
+                Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
+            }
+        }
 
         private void addNewClientBtn_SalesTab_Click(object sender, EventArgs e)
         {
@@ -75,44 +78,55 @@ namespace B_PaymentManager
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try{
+            try
+            {
                 if (tabControl1.SelectedIndex == 1)
-            {
-                sellOp = new SellingOperation();
-                sellOp.ShowDialog();
+                {
+                    sellOp = new SellingOperation();
+                    sellOp.ShowDialog();
+                }
+                if (tabControl1.SelectedIndex == 2)
+                {
+                    addPro = new AddProduct();
+                    addPro.ShowDialog();
+                }
+                if (tabControl1.SelectedIndex == 3)
+                {
+                    clientPaymentManger = new ClientPaymentManger();
+                    clientPaymentManger.ShowDialog();
+                }
+                if (tabControl1.SelectedIndex == 4)
+                {
+                    addClient = new AddClient();
+                    addClient.ShowDialog();
+                }
+                if (tabControl1.SelectedIndex == 5)
+                {
+                    shortageForm = new ProductsShortageReport();
+                    shortageForm.ShowDialog();
+                }
+                if (tabControl1.SelectedIndex == 6)
+                {
+                    gardForm = new GardReport();
+                    gardForm.ShowDialog();
+                }
+                if (tabControl1.SelectedIndex == 8)
+                {
+                    configForm = new ConfigForm();
+                    configForm.ShowDialog();
+                }
+                if (tabControl1.SelectedIndex == 7)
+                {
+                    partnershipFram = new PartnershipManagement();
+                    partnershipFram.ShowDialog();
+                }
             }
-            if (tabControl1.SelectedIndex==2)
+            catch (Exception ex)
             {
-                addPro = new AddProduct();
-                addPro.ShowDialog();
-            }
-            if (tabControl1.SelectedIndex == 3)
-            {
-                clientPaymentManger = new ClientPaymentManger();
-                clientPaymentManger.ShowDialog();
-            }
-            if (tabControl1.SelectedIndex == 4)
-            {
-                addClient = new AddClient();
-                addClient.ShowDialog();
-            }
-            if (tabControl1.SelectedIndex == 5)
-            {
-                shortageForm = new ProductsShortageReport();
-                shortageForm.ShowDialog();
-            }
-            if (tabControl1.SelectedIndex == 6)
-            {
-                gardForm = new GardReport();
-                gardForm.ShowDialog();
+                MessageBox.Show("خطأ عام من برجاء الاغلاق و المحاولة مره اخرى");
+                Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
             }
         }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("خطأ عام من برجاء الاغلاق و المحاولة مره اخرى");
-                    Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ".");
-                }
-}
 
         private void MainForm_Load(object sender, EventArgs e)
         {

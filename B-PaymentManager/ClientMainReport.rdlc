@@ -16,15 +16,15 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Right</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.19667in</Top>
-        <Left>6.26958in</Left>
+        <Top>0.11334in</Top>
+        <Left>4.80084in</Left>
         <Height>0.35417in</Height>
-        <Width>1in</Width>
+        <Width>1.11458in</Width>
         <Style>
           <Border>
             <Style>Dashed</Style>
@@ -50,15 +50,15 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Right</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.19667in</Top>
-        <Left>3.72792in</Left>
+        <Top>0.11334in</Top>
+        <Left>2.77923in</Left>
         <Height>0.25in</Height>
-        <Width>2.40229in</Width>
+        <Width>1.87104in</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -85,15 +85,15 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Right</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.19667in</Top>
-        <Left>0.3802in</Left>
+        <Top>0.11334in</Top>
+        <Left>0.13021in</Left>
         <Height>0.25in</Height>
-        <Width>1.89632in</Width>
+        <Width>1.3859in</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -120,13 +120,13 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Right</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox7</rd:DefaultName>
-        <Top>0.19667in</Top>
-        <Left>2.45659in</Left>
+        <Top>0.11334in</Top>
+        <Left>1.7066in</Left>
         <Height>0.35417in</Height>
         <Width>0.92361in</Width>
         <ZIndex>3</ZIndex>
@@ -155,15 +155,15 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Right</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox11</rd:DefaultName>
-        <Top>0.63417in</Top>
-        <Left>6.26958in</Left>
+        <Top>0.55084in</Top>
+        <Left>4.80084in</Left>
         <Height>0.33333in</Height>
-        <Width>1in</Width>
+        <Width>1.11458in</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
@@ -190,15 +190,15 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Right</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox12</rd:DefaultName>
-        <Top>0.63417in</Top>
-        <Left>3.72792in</Left>
+        <Top>0.55084in</Top>
+        <Left>2.77923in</Left>
         <Height>0.46875in</Height>
-        <Width>2.40229in</Width>
+        <Width>1.87104in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -224,12 +224,14 @@
                 </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>0.7175in</Top>
-        <Left>2.45659in</Left>
+        <Top>0.63417in</Top>
+        <Left>1.7066in</Left>
         <Height>0.38542in</Height>
         <Width>0.92361in</Width>
         <ZIndex>6</ZIndex>
@@ -258,15 +260,15 @@
               </TextRun>
             </TextRuns>
             <Style>
-              <TextAlign>Center</TextAlign>
+              <TextAlign>Right</TextAlign>
             </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox14</rd:DefaultName>
-        <Top>0.7175in</Top>
-        <Left>0.3802in</Left>
+        <Top>0.63417in</Top>
+        <Left>0.13021in</Left>
         <Height>0.25in</Height>
-        <Width>1.89632in</Width>
+        <Width>1.3859in</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -283,25 +285,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.85994in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.85994in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.85994in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.85994in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.85994in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.85994in</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1in</Width>
+              <Width>0.85994in</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -319,7 +321,7 @@
                             <TextRun>
                               <Value>الباقى</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
+                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -352,15 +354,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>الاقساط المدفوعة</Value>
+                              <Value>اجمالى المدفوع</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
+                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Center</TextAlign>
+                            <TextAlign>Right</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -389,7 +391,7 @@
                             <TextRun>
                               <Value>المقدم</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
+                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -422,9 +424,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>السعر الكلى</Value>
+                              <Value>الاجمالى</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
+                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -459,7 +461,7 @@
                             <TextRun>
                               <Value>العدد</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
+                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -492,9 +494,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>سعر البيع</Value>
+                              <Value>السعر</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
+                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -529,7 +531,7 @@
                             <TextRun>
                               <Value>اسم الصنف</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
+                                <FontSize>11pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -808,10 +810,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet2</DataSetName>
-        <Top>1.69667in</Top>
-        <Left>0.3802in</Left>
+        <Top>1.61334in</Top>
+        <Left>0.13021in</Left>
         <Height>0.5in</Height>
-        <Width>7in</Width>
+        <Width>6.01959in</Width>
         <ZIndex>8</ZIndex>
         <Style>
           <Border>
@@ -828,8 +830,55 @@
       </Border>
     </Style>
   </Body>
-  <Width>8.00917in</Width>
+  <Width>6.2634in</Width>
   <Page>
+    <PageHeader>
+      <Height>1in</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Textbox Name="Textbox15">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>تقرير العميل</Value>
+                  <Style>
+                    <FontSize>16pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox7</rd:DefaultName>
+          <Top>0.32292in</Top>
+          <Left>2.77923in</Left>
+          <Height>0.35417in</Height>
+          <Width>1in</Width>
+          <Style>
+            <Border>
+              <Style>Dashed</Style>
+              <Width>2pt</Width>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>Dashed</Style>
+          <Width>1.5pt</Width>
+        </Border>
+      </Style>
+    </PageHeader>
     <PageFooter>
       <Height>0.44792in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
@@ -856,7 +905,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox94</rd:DefaultName>
           <Top>0.08333in</Top>
-          <Left>3.3802in</Left>
+          <Left>0.99015in</Left>
           <Height>0.28125in</Height>
           <Width>2.0325in</Width>
           <Style>
@@ -891,7 +940,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox93</rd:DefaultName>
           <Top>0.08333in</Top>
-          <Left>5.58632in</Left>
+          <Left>3.19627in</Left>
           <Height>0.28125in</Height>
           <Width>1.8125in</Width>
           <ZIndex>1</ZIndex>

@@ -34,8 +34,8 @@
                               <Value>الكمية الحالية</Value>
                               <Style>
                                 <FontFamily>Californian FB</FontFamily>
-                                <FontSize>20pt</FontSize>
-                                <TextDecoration>Underline</TextDecoration>
+                                <FontSize>14pt</FontSize>
+                                <TextDecoration>None</TextDecoration>
                                 <Color>DarkBlue</Color>
                               </Style>
                             </TextRun>
@@ -71,8 +71,8 @@
                               <Value>اسم الصنف</Value>
                               <Style>
                                 <FontFamily>Californian FB</FontFamily>
-                                <FontSize>20pt</FontSize>
-                                <TextDecoration>Underline</TextDecoration>
+                                <FontSize>14pt</FontSize>
+                                <TextDecoration>None</TextDecoration>
                                 <Color>DarkBlue</Color>
                               </Style>
                             </TextRun>
@@ -108,8 +108,8 @@
                               <Value>نوع الصنف</Value>
                               <Style>
                                 <FontFamily>Californian FB</FontFamily>
-                                <FontSize>20pt</FontSize>
-                                <TextDecoration>Underline</TextDecoration>
+                                <FontSize>14pt</FontSize>
+                                <TextDecoration>None</TextDecoration>
                                 <Color>DarkBlue</Color>
                               </Style>
                             </TextRun>
@@ -145,8 +145,8 @@
                               <Value>كود الصنف</Value>
                               <Style>
                                 <FontFamily>Californian FB</FontFamily>
-                                <FontSize>20pt</FontSize>
-                                <TextDecoration>Underline</TextDecoration>
+                                <FontSize>14pt</FontSize>
+                                <TextDecoration>None</TextDecoration>
                                 <Color>DarkBlue</Color>
                               </Style>
                             </TextRun>
@@ -186,7 +186,7 @@
                             <TextRun>
                               <Value>=Fields!product_avail_quant.Value</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -220,7 +220,7 @@
                             <TextRun>
                               <Value>=Fields!product_name.Value</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -254,7 +254,7 @@
                             <TextRun>
                               <Value>=Fields!group_name.Value</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -288,7 +288,7 @@
                             <TextRun>
                               <Value>=Fields!ID.Value</Value>
                               <Style>
-                                <FontSize>16pt</FontSize>
+                                <FontSize>11pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -334,8 +334,16 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
+        <SortExpressions>
+          <SortExpression>
+            <Value>=Fields!product_name.Value</Value>
+          </SortExpression>
+          <SortExpression>
+            <Value>=Fields!product_avail_quant.Value</Value>
+          </SortExpression>
+        </SortExpressions>
         <Top>0.4675in</Top>
-        <Left>0.30083in</Left>
+        <Left>0.17583in</Left>
         <Height>0.80208in</Height>
         <Width>5.89584in</Width>
         <Style>
@@ -353,7 +361,7 @@
       </Border>
     </Style>
   </Body>
-  <Width>6.41542in</Width>
+  <Width>6.2175in</Width>
   <Page>
     <PageHeader>
       <Height>0.73958in</Height>
@@ -369,9 +377,9 @@
                 <TextRun>
                   <Value>تقرير النواقص</Value>
                   <Style>
-                    <FontSize>26pt</FontSize>
+                    <FontSize>20pt</FontSize>
                     <FontWeight>Bold</FontWeight>
-                    <TextDecoration>Underline</TextDecoration>
+                    <TextDecoration>None</TextDecoration>
                     <Color>Olive</Color>
                   </Style>
                 </TextRun>
@@ -383,8 +391,8 @@
           </Paragraphs>
           <rd:DefaultName>Textbox19</rd:DefaultName>
           <Top>0.10417in</Top>
-          <Left>2.30305in</Left>
-          <Height>0.46875in</Height>
+          <Left>2.1468in</Left>
+          <Height>0.35417in</Height>
           <Width>1.89062in</Width>
           <Style>
             <Border>
@@ -430,7 +438,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox93</rd:DefaultName>
           <Top>0.06944in</Top>
-          <Left>4.03346in</Left>
+          <Left>3.12375in</Left>
           <Height>0.28125in</Height>
           <Width>1.8125in</Width>
           <Style>
@@ -464,7 +472,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox94</rd:DefaultName>
           <Top>0.06944in</Top>
-          <Left>1.82734in</Left>
+          <Left>0.91763in</Left>
           <Height>0.28125in</Height>
           <Width>2.0325in</Width>
           <ZIndex>1</ZIndex>

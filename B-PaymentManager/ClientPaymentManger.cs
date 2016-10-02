@@ -84,7 +84,7 @@ namespace B_PaymentManager
                 try
                 {
                     conObj.startConnection();
-                    String sql = "select id from clients where client_national_id='" + clientNationalTxt + "'";
+                    String sql = "select id from clients where client_national_id='" + clientNationalTxt.Text + "'";
                     conObj.SQLCODE(sql, false);
                     if (conObj.myReader.Read())
                     {
@@ -192,6 +192,14 @@ namespace B_PaymentManager
             {
                 MessageBox.Show("خطأ ف اختيار البيانات");
                 Logger.WriteLog("[" + DateTime.Now + "] " + ex.Message + ". ["+this.Name + "] Line "+170);
+            }
+        }
+
+        private void paymetReportButtn_Click(object sender, EventArgs e)
+        {
+            if (clientIdInt!=-1&& detailsGrid.Rows.Count>0) {
+                PaymentHistoryReportForm report = new PaymentHistoryReportForm(clientIdInt);
+                report.ShowDialog();
             }
         }
     }

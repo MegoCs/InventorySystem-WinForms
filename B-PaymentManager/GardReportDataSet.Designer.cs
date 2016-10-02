@@ -361,6 +361,8 @@ namespace B_PaymentManager {
             
             private global::System.Data.DataColumn columnproduct_price;
             
+            private global::System.Data.DataColumn columnmoneyValue;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ProductsDataTable() {
@@ -444,6 +446,14 @@ namespace B_PaymentManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn moneyValueColumn {
+                get {
+                    return this.columnmoneyValue;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -479,7 +489,7 @@ namespace B_PaymentManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ProductsRow AddProductsRow(string product_name, int product_group_id, int product_avail_quant, int product_risk_quant, int product_price) {
+            public ProductsRow AddProductsRow(string product_name, int product_group_id, int product_avail_quant, int product_risk_quant, int product_price, int moneyValue) {
                 ProductsRow rowProductsRow = ((ProductsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -487,7 +497,8 @@ namespace B_PaymentManager {
                         product_group_id,
                         product_avail_quant,
                         product_risk_quant,
-                        product_price};
+                        product_price,
+                        moneyValue};
                 rowProductsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowProductsRow);
                 return rowProductsRow;
@@ -523,6 +534,7 @@ namespace B_PaymentManager {
                 this.columnproduct_avail_quant = base.Columns["product_avail_quant"];
                 this.columnproduct_risk_quant = base.Columns["product_risk_quant"];
                 this.columnproduct_price = base.Columns["product_price"];
+                this.columnmoneyValue = base.Columns["moneyValue"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -540,6 +552,8 @@ namespace B_PaymentManager {
                 base.Columns.Add(this.columnproduct_risk_quant);
                 this.columnproduct_price = new global::System.Data.DataColumn("product_price", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnproduct_price);
+                this.columnmoneyValue = new global::System.Data.DataColumn("moneyValue", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnmoneyValue);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -548,6 +562,7 @@ namespace B_PaymentManager {
                 this.columnID.AllowDBNull = false;
                 this.columnID.Unique = true;
                 this.columnproduct_name.MaxLength = 255;
+                this.columnmoneyValue.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1275,6 +1290,22 @@ namespace B_PaymentManager {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int moneyValue {
+                get {
+                    try {
+                        return ((int)(this[this.tableProducts.moneyValueColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'moneyValue\' in table \'Products\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableProducts.moneyValueColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool Isproduct_nameNull() {
                 return this.IsNull(this.tableProducts.product_nameColumn);
             }
@@ -1331,6 +1362,18 @@ namespace B_PaymentManager {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void Setproduct_priceNull() {
                 this[this.tableProducts.product_priceColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsmoneyValueNull() {
+                return this.IsNull(this.tableProducts.moneyValueColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetmoneyValueNull() {
+                this[this.tableProducts.moneyValueColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -1653,6 +1696,7 @@ namespace B_PaymentManager.GardReportDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("product_avail_quant", "product_avail_quant");
             tableMapping.ColumnMappings.Add("product_risk_quant", "product_risk_quant");
             tableMapping.ColumnMappings.Add("product_price", "product_price");
+            tableMapping.ColumnMappings.Add("moneyValue", "moneyValue");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1716,7 +1760,8 @@ namespace B_PaymentManager.GardReportDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ID, product_name, product_group_id, product_avail_quant, product_risk_quan" +
-                "t, product_price FROM Products";
+                "t, product_price, product_avail_quant*product_price As moneyValue  FROM Products" +
+                "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
